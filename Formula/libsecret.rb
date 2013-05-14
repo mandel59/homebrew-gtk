@@ -16,7 +16,7 @@ class Libsecret < Formula
 
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}", "--disable-manpages"
 
     system "make", "install" # if this fails, try separate make/make install steps
   end
