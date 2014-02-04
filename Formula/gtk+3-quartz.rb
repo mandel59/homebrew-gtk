@@ -17,6 +17,12 @@ class Gtkx3Quartz < Formula
   depends_on 'atk'
   depends_on 'at-spi2-atk'
 
+  def patches
+    # This patch just barely missed the release
+    # https://www.mail-archive.com/gtk-osx-devel-list@gnome.org/msg00079.html
+    DATA
+  end
+
   def install
     system "./configure", "--disable-debug",
                           "--disable-dependency-tracking",
@@ -35,3 +41,18 @@ class Gtkx3Quartz < Formula
     system "#{bin}/gtk3-demo"
   end
 end
+
+__END__
+diff --git a/gtk/gtkselection.c b/gtk/gtkselection.c
+index 1c77002..3fa8971 100644
+--- a/gtk/gtkselection.c
++++ b/gtk/gtkselection.c
+@@ -2294,7 +2294,7 @@ _gtk_selection_request (GtkWidget *widget,
+   gulong selection_max_size;
+
+   if (event->requestor == NULL)
+-    return;
++    return FALSE;
+
+   if (initialize)
+     gtk_selection_init ();
