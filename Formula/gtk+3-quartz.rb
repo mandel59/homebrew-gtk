@@ -2,8 +2,8 @@ require 'formula'
 
 class Gtkx3Quartz < Formula
   homepage 'http://gtk.org/'
-  url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.6.tar.xz'
-  sha256 '3c24c57fc5cb7a5ea39d3a3ff7b12be63d7f21a52fd6f20f7b983e19b7b0268a'
+  url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.7.tar.xz'
+  sha256 'b7e9de15385031cff43897e7e59f6692eaabf500f36eef80e6b9d6486ad49427'
 
   depends_on 'pkg-config' => :build
   depends_on 'xz' => :build
@@ -16,7 +16,6 @@ class Gtkx3Quartz < Formula
   depends_on 'jasper' => :optional
   depends_on 'atk'
   depends_on 'at-spi2-atk'
-  depends_on 'gobject-introspection'
 
   def install
     system "./configure", "--disable-debug",
