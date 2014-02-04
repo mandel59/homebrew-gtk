@@ -13,7 +13,10 @@ class Gtkx3Quartz < Formula
   depends_on 'gdk-pixbuf'
   depends_on 'pango-quartz'
   depends_on 'cairo-quartz'
+  depends_on 'jasper' => :optional
   depends_on 'atk'
+  depends_on 'at-spi2-atk'
+  depends_on 'gobject-introspection'
 
   def install
     system "./configure", "--disable-debug",
