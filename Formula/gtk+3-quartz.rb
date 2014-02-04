@@ -2,8 +2,8 @@ require 'formula'
 
 class Gtkx3Quartz < Formula
   homepage 'http://gtk.org/'
-  url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.8/gtk+-3.8.1.tar.xz'
-  sha256 'f43e7c7d7a0e2417225509e88f67799534c69abfbb6f615fc7a895bf15e31255'
+  url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.6.tar.xz'
+  sha256 '3c24c57fc5cb7a5ea39d3a3ff7b12be63d7f21a52fd6f20f7b983e19b7b0268a'
 
   depends_on 'pkg-config' => :build
   depends_on 'xz' => :build
