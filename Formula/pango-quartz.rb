@@ -8,7 +8,7 @@ class PangoQuartz < Formula
   depends_on 'pkg-config' => :build
   depends_on 'xz' => :build
   depends_on 'glib'
-  depends_on 'harfbuzz'
+  depends_on 'harfbuzz-quartz'
   depends_on 'cairo-quartz'
 
   fails_with :llvm do

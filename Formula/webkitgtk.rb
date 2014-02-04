@@ -14,7 +14,7 @@ class Webkitgtk < Formula
   depends_on 'libsoup'
   depends_on 'libsecret'
   depends_on 'freetype'
-  depends_on 'harfbuzz'
+  depends_on 'harfbuzz-quartz'
   depends_on 'fontconfig'
   depends_on 'enchant'
   depends_on 'gst-plugins-base-quartz'
