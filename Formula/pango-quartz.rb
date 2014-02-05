@@ -10,8 +10,6 @@ class PangoQuartz < Formula
   depends_on 'glib'
   depends_on 'harfbuzz-quartz'
   depends_on 'cairo-quartz'
-  depends_on 'fontconfig'
-  depends_on 'gobject-introspection'
 
   fails_with :llvm do
     build 2326
@@ -24,9 +22,14 @@ class PangoQuartz < Formula
       --prefix=#{prefix}
       --enable-man
       --with-html-dir=#{share}/doc
-      --enable-introspection=yes
-      --without-xft
+      --disable-introspection
     ]
+
+    if build.include? 'without-x'
+      args << '--without-xft'
+    else
+      args << '--with-xft'
+    end
 
     system "./configure", *args
     system "make"
