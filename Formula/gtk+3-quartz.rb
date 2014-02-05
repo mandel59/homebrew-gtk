@@ -16,7 +16,6 @@ class Gtkx3Quartz < Formula
   depends_on 'jasper' => :optional
   depends_on 'atk'
   depends_on 'at-spi2-atk'
-  depends_on 'gobject-introspection'
 
   def patches
     # This patch just barely missed the release
@@ -29,7 +28,7 @@ class Gtkx3Quartz < Formula
                           "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--disable-glibtest",
-                          "--enable-introspection=yes",
+                          "--disable-introspection",
                           "--enable-quartz-backend",
                           "--enable-quartz-relocation"
 
