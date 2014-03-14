@@ -11,10 +11,10 @@ class GtkxQuartz < Formula
   depends_on 'jpeg'
   depends_on 'libtiff'
   depends_on 'gdk-pixbuf'
-  depends_on 'pango-quartz'
+  depends_on 'pango'
   depends_on 'jasper' => :optional
   depends_on 'atk'
-  depends_on 'cairo-quartz'
+  depends_on 'cairo'
 
   fails_with :llvm do
     build 2326
