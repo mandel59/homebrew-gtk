@@ -1,6 +1,6 @@
 require 'formula'
 
-class Gtkx3Quartz < Formula
+class Gtkx3 < Formula
   homepage 'http://gtk.org/'
   url 'http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.7.tar.xz'
   sha256 'b7e9de15385031cff43897e7e59f6692eaabf500f36eef80e6b9d6486ad49427'
